@@ -17,9 +17,9 @@ public class CombSortSorter<E> extends AbstractSorter<E> {
 
 	@Override
 	protected void auxSort() {
-		int n = arr.length;
+		int sizeArr = arr.length;
 		// initialize gap
-		int gap = n;
+		int gap = sizeArr;
 
 		boolean gapSwap = true;
 
@@ -33,7 +33,7 @@ public class CombSortSorter<E> extends AbstractSorter<E> {
 			gapSwap = false;
 
 			// Compare all elements with current gap
-			for (int i = 0; i < n - gap; i++) {
+			for (int i = 0; i < sizeArr - gap; i++) {
 				if (cmp.compare(arr[i], arr[i+gap])==1) {
 					E temp = arr[i];
 					arr[i] = arr[i + gap];
