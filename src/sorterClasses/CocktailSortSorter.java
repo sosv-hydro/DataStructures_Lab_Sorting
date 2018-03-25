@@ -13,13 +13,9 @@ public class CocktailSortSorter<E> extends AbstractSorter<E> {
 		int end = arr.length;
 
 		while (swapped == true) {
-			// reset the swapped flag on entering the
-			// loop, because it might be true from a
-			// previous iteration.
 			swapped = false;
 
-			// loop from bottom to top same as
-			// the bubble sort
+			//same as bubble sort 
 			for (int i = start; i < end - 1; ++i) {
 				if (cmp.compare(arr[i], arr[i+1])==1) {
 					E temp = arr[i];
@@ -29,20 +25,14 @@ public class CocktailSortSorter<E> extends AbstractSorter<E> {
 				}
 			}
 
-			// if nothing moved, then array is sorted.
 			if (swapped == false)
 				break;
-
-			// otherwise, reset the swapped flag so that it
-			// can be used in the next stage
+			
 			swapped = false;
 
-			// move the end point back by one, because
-			// item at the end is in its rightful spot
 			end = end - 1;
 
-			// from top to bottom, doing the
-			// same comparison as in the previous stage
+			//same as bubble sort but backwards
 			for (int i = end - 1; i >= start; i--) {
 				if (cmp.compare(arr[i], arr[i+1])==1) {
 					E temp = arr[i];
@@ -52,18 +42,7 @@ public class CocktailSortSorter<E> extends AbstractSorter<E> {
 				}
 			}
 
-			// increase the starting point, because
-			// the last stage would have moved the next
-			// smallest number to its rightful spot.
 			start = start + 1;
 		}
-	}
-
-	/* Prints the array */
-	void printArray(int a[]) {
-		int n = a.length;
-		for (int i = 0; i < n; i++)
-			System.out.print(a[i] + " ");
-		System.out.println();
 	}
 }
