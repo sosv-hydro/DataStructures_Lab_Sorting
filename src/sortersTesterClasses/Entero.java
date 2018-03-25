@@ -1,6 +1,6 @@
 package sortersTesterClasses;
 
-public class Entero implements Comparable<Integer> {
+public class Entero implements Comparable {
 	private int value;
 
 	public Entero(int v) {
@@ -16,13 +16,15 @@ public class Entero implements Comparable<Integer> {
 	}
 
 	@Override
-	public int compareTo(Integer o) {
-		if (this.getValue() == o)
-			return 0;
-		else if (this.getValue() > o)
+	public int compareTo(Object o) {
+		Entero e = (Entero) o;
+
+		if (this.getValue() > e.getValue())
 			return 1;
-		else
+		if (this.getValue() < e.getValue())
 			return -1;
+		else
+			return 0;
 	}
 
 }

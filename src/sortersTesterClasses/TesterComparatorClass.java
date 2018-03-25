@@ -20,9 +20,9 @@ public class TesterComparatorClass {
 		
 		Integer[] arr = { 5, 9, 20, 22, 20, 5, 4, 13, 17, 8, 22, 1, 3, 7, 11, 9, 10 };
 		
-		System.out.println("Original" + arr);
-		tester2("two comaparations", new IntegerComparator1(), arr);
-		tester2("two comparations", new IntegerComparator2(), arr);
+		showArray("Original Array before sorting", arr);
+		tester2("Sorting using Comparator 1", new IntegerComparator1(), arr);
+		tester2("Sorting using Comparator 2", new IntegerComparator2(), arr);
 
 	}
 
