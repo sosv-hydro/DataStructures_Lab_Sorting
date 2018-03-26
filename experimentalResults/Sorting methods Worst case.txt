@@ -6,3 +6,7 @@ Bubble Sort: O(n^2)
 Selection Sort: O(n^2)
 Comb Sort: O(n^2)
 Cocktail Sort: O(n^2)
+
+Most of these implementations have their worst case when the list is 
+completly backwards in its order. So the sorting method has to go 
+through all the elements, moving them accordingly. 
