@@ -1,0 +1,8 @@
+Worst Case for Sorting algorithms:
+
+Heap sort: O(n)
+Insertion Sort: O(n^2)
+Bubble Sort: O(n^2)
+Selection Sort: O(n^2)
+Comb Sort: O(n^2)
+Cocktail Sort: O(n^2)
